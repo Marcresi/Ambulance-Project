@@ -97,7 +97,7 @@ def generate_mapwithlist():
     %s
     </table>
     <div class="button">
-        <a type="button" class="btn">BOOK AMBULANCE</a>
+        <a type="button" onclick=window.location='confirmation.html' class="btn">BOOK AMBULANCE</a>
     </div>    
         </div>
         <div class = container2>
