@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FastLance</title>
+    <link rel="icon" type="image/png" href="images/site-logo_2.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   </head>
@@ -12,7 +13,7 @@
     <div class="main-container">
       <div class="aside">
          <div class="logo">
-             <span><img class="site-logo" src="images\site-logo_2.png"/></span>
+             <span><img class="site-logo" src="images\site-logo_2.png" alt="loading..."/></span>
          </div>
          <div class="nav-toggler">
              <span></span>
@@ -210,10 +211,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
     <script>
-        function genMap(){
+        function genMap()
+        {
             fetch('http://127.0.0.1:8000/map')
             .then(()=>window.location.href="info.html")
         }
     </script>
   </body>
-</html>
+</html> 

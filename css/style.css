@@ -133,7 +133,7 @@ ul
     border: none;
     background: var(--btn-red);
     transition: all 0.3s ease;
-
+    cursor: pointer;
 }
 .btn:hover
 {

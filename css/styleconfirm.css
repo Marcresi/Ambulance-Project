@@ -40,6 +40,11 @@ border-color: black;
 .fa-long-arrow-left{
   font-size: 1.3em;
 }
+.c1-item.s{
+  color: rgb(97, 97, 244);
+}
+
+
 
 .c1-item, .c2-item,.c3-item{
   font-size: 1.5em;
