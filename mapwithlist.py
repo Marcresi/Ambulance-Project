@@ -35,23 +35,23 @@ def generate_mapwithlist():
             dis = geopy.distance.geodesic(coords_1, coords_2).km
             if(dis < 10):
                 li1.append({'longitude': z['longitude'],
-                        'latitude': z['latitude']})
+                        'latitude': z['latitude'],'Name': z['Health Facility Name']})
                 li2.append(
-                    {'Name': z['Health Facility Name'], 'Distance': int(dis)})
+                    {'Name': z['Health Facility Name'], 'Distance': int(int(dis)*1.12)})
 
 
     # Map ka code
-    hos_map = folium.Map(location=[lat, lon], zoom_start=10)
+    hos_map = folium.Map(location=[lat, lon], zoom_start=12)
 
     fg = folium.FeatureGroup(name='Abhijit')
 
     for i in li1:
 
         fg.add_child(folium.Marker(
-            location=[i['latitude'], i['longitude']], icon=folium.Icon(color='red')))
+            location=[i['latitude'], i['longitude']],popup=i['Name'], icon=folium.Icon(color='red'))) 
 
     fg.add_child(folium.Marker(
-        location=[lat, lon], icon=folium.Icon(color='blue')))
+        location=[lat, lon], icon=folium.Icon(color='blue'),popup="Your Location"))
 
 
     hos_map.add_child(fg)
@@ -63,8 +63,12 @@ def generate_mapwithlist():
     # List Ka Code
     li2.sort(key=lambda x: x["Distance"])
     tbl = ""
-
+    c=0
     for y in li2:
+        if c==5:
+            break
+
+        c=c+1
         a = "<tr onclick=window.location='confirmation.html';><td class='hfn'>%s<td>" %y['Name']
         b = "<td>%s</td></tr>" %y['Distance']
         tbl = tbl+a+b
@@ -81,18 +85,20 @@ def generate_mapwithlist():
     </head>
     <body>
     <div class="twoparts">
-    <div class="container">
+        <div class="container">
             <div class="containerhead">
                 <label for="Search" class="label1">Choose a Hospital</label>
-                <form action="" class="searchbar">
+                    <form action="" class="searchbar">
                     <input type="text" id="myinput" placeholder="Search Nearby Hospitals....." onkeyup="searchFun()">
-                    <button class="button1"><i class="fa-solid fa-magnifying-glass-location fa-2x" ></i></button>
-                </form>
+                    </form>
                 <label for="mention" class="label2">Nearby Hospitals</label>
             </div>
     <table  id="mytable">
     %s
     </table>
+    <div class="button">
+        <a type="button" class="btn">BOOK AMBULANCE</a>
+    </div>    
         </div>
         <div class = container2>
             <iframe src="hos1map.html" width="1700px" height="900" >
@@ -100,8 +106,6 @@ def generate_mapwithlist():
         </div>
 
         </div>
-
-
         <script>
             const searchFun = () => {
                 let filter = document.getElementById('myinput').value.toUpperCase();
@@ -119,7 +123,8 @@ def generate_mapwithlist():
                         if (textvalue.toUpperCase().indexOf(filter) > -1) {
                             tr[i].style.display = "";
                         }
-                        else {
+                        else 
+                        {
                             tr[i].style.display = "none";
                         }
                     }
@@ -127,9 +132,10 @@ def generate_mapwithlist():
             }
             </script>
             <script>
-             $("tr").click(function(){
-   window.location = "confirmation.html";
- });
+             $("tr").click
+             (
+             window.location = "confirmation.html"
+             );
             </script>
     </body>
     </html>
@@ -153,3 +159,4 @@ def generate_mapwithlist():
 
 # generate_mapwithlist()
 
+# window.location = "confirmation.html";

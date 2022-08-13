@@ -47,7 +47,7 @@ a {
 button {
 	border-radius: 20px;
 	border: 1px solid #ff1a1a;
-	background-color:#ff1a1a ;
+	background: linear-gradient(to right,#c962a3,#a70606);
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -55,6 +55,7 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+	cursor: pointer;
 }
 
 button:active {
@@ -162,7 +163,7 @@ input {
 .overlay {
 	background: #ff1a1a;;
 	background: -webkit-linear-gradient(to right, #FFF0F5,#ff1a1a);
-	background: linear-gradient(to right,#1cc84d,#0fdcb0);
+	background: linear-gradient(to right,#c962a3,#a70606);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
