@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <html>
+    <head>
+    <script src="https://kit.fontawesome.com/de9d45e1c6.js" crossorigin="anonymous"></script>
+    <meta http-equiv="content-type">
+    <link rel="stylesheet" href="mapliststyle.css">
+    <title>Hospital</title>
+    </head>
+    <body>
+    <div class="twoparts">
+    <div class="container">
+            <div class="containerhead">
+                <label for="Search" class="label1">Choose a Hospital</label>
+                <form action="" class="searchbar">
+                    <input type="text" id="myinput" placeholder="Search Nearby Hospitals....." onkeyup="searchFun()">
+                    <button class="button1"><i class="fa-solid fa-magnifying-glass-location fa-2x" ></i></button>
+                </form>
+                <label for="mention" class="label2">Nearby Hospitals</label>
+            </div>
+    <table  id="mytable">
+    <tr onclick=window.location='confirmation.html';><td class='hfn'>Hillside Hospital<td><td>7</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Sagar Hospital<td><td>7</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Vasavi Hospital<td><td>8</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Ayu Health Hospital<td><td>8</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>London care Hospital<td><td>8</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Astrika Midwifery Centre<td><td>8</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Negihbourhood Hospitals<td><td>8</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Cura Hospitals<td><td>9</td></tr><tr onclick=window.location='confirmation.html';><td class='hfn'>Sri Sai Ram Hospital<td><td>9</td></tr>
+    </table>
+        </div>
+        <div class = container2>
+            <iframe src="hos1map.html" width="1700px" height="900" >
+        </iframe>
+        </div>
+
+        </div>
+
+
+        <script>
+            const searchFun = () => {
+                let filter = document.getElementById('myinput').value.toUpperCase();
+
+                let myTable = document.getElementById('mytable');
+
+                let tr = myTable.getElementsByTagName('tr');
+
+                for (var i = 0; i < tr.length; i++) {
+                    let td = tr[i].getElementsByTagName('td')[0];
+
+                    if (td) {
+                        let textvalue = td.textContent || td.innerHTML;
+
+                        if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        }
+                        else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+            </script>
+            <script>
+             $("tr").click(function(){
+   window.location = "confirmation.html";
+ });
+            </script>
+    </body>
+    </html>
+    
