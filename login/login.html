@@ -20,10 +20,10 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
+			<input type="text" placeholder="Name" id="name"/>
+			<input type="email" placeholder="Email" id="email"/>
+			<input type="password" placeholder="Password" id="password"/>
+			<button onclick="SignUp()">Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -35,9 +35,9 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Log In</button>
+			<input type="email" placeholder="Email" id="lname"/>
+			<input type="password" placeholder="Password" id="lpassword"/>
+			<button onclick="Login()">Log In</button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -56,5 +56,24 @@
 	</div>
 </div>
       <script src="main.js"></script>
+	  <script>
+		function SignUp(){
+		var name =  document.getElementById("name").value;
+		var email =  document.getElementById("email").value;
+		var password =  document.getElementById("password").value;
+		fetch(`http://127.0.0.1:8000/register/name=${name}&email=${email}&password=${password}`)
+		.then(response=>response.json())
+		.then(data=>window.location.href = '../index.html')
+		
+		}
+		function Login(){
+		var email =  document.getElementById("lemail").value;
+		var password =  document.getElementById("lpassword").value;
+		fetch(`http://127.0.0.1:8000/login/email=${email}&password=${password}`)
+		.then(response=>response.json())
+		.then(data=>console.log(data))
+		}
+		
+	  </script>
 </body>
 </html>
