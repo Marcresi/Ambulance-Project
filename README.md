@@ -1,6 +1,6 @@
 # Ambulance-Project
 
-### How to Run the WebApplication on your **PC**
+### How to Run the Web Application on your **PC**
 - Step 1: Make sure you have the development environment setuped. Step 2: Clone our Application GitHub repo
 - Step 3: Install Python libraries: **Eg- pip install pymongo** in your terminal after starting the project.
 - Step 4: Run the FastAPI framework by typing - **uvicorn main:app --reload** in the terminal , the api is now functioning
