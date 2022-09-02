@@ -24,8 +24,7 @@ Our Web Application allows the user to book an ambulance according to his/her co
 - On confirming the booking , the user is directed to a confirmation page **displaying the traveler and driver details** along with **the user and hospital location**.
 
 ## Challenges we ran into
-- Time constraint was one of the major challenges we faced.
-- Connecting our front-end components to the map and list components.
+- Connecting our front-end components to the map and list components as we needed to build a API to generate the python module as a function.
 
 ## What we learned
 - Displaying specified locations on map on a web application
