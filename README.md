@@ -1,4 +1,4 @@
-# Ambulance-Project
+# FASTLANCE-Ambulance Project
 
 ### How to Run the Web Application on your **PC**
 - Step 1: Make sure you have the development environment setuped. 
