@@ -7,8 +7,12 @@ app=FastAPI()
 
 @app.get('/map')
 def generate():
+    return "Welcome to our Ambulance Booking System"
+
+@app.get('/map')
+def generate():
     generate_mapwithlist()
-    return ""
+    return "Genrating List of hospitals with ambulance services."
 
 @app.get('/register/name={name}&email={email}&password={password}')
 def register(name:str,email:str,password:str):
