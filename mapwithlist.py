@@ -29,11 +29,11 @@ def generate_mapwithlist():
     li2 = []
 
     filcol = mycol.find()
-    for z in filcol:
+    for z in filcol :
         if(math.isnan(z['latitude']) == False and math.isnan(z['longitude']) == False):
             coords_2 = (z['latitude'], z['longitude'])
             dis = geopy.distance.geodesic(coords_1, coords_2).km
-            if(dis < 10):
+            if(dis < 500):
                 li1.append({'longitude': z['longitude'],
                         'latitude': z['latitude'],'Name': z['Health Facility Name']})
                 li2.append(
@@ -81,6 +81,7 @@ def generate_mapwithlist():
     <script src="https://kit.fontawesome.com/de9d45e1c6.js" crossorigin="anonymous"></script>
     <meta http-equiv="content-type">
     <link rel="stylesheet" href="mapliststyle.css">
+    <link rel="icon" type="image/png" href="images/site-logo_2.png">
     <title>Hospital</title>
     </head>
     <body>
