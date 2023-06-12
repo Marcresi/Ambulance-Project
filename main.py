@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app=FastAPI()
 
-@app.get('/map')
+@app.get('/')
 def generate():
     return "Welcome to our Ambulance Booking System"
 
