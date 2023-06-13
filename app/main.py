@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app=FastAPI()
 
 @app.get('/')
-def welcome():
+def welcomeHomePage():
     return "Welcome to our Ambulance Booking System"
 
 @app.get('/map')
