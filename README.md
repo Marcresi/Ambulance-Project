@@ -27,6 +27,9 @@ Our Web Application allows the user to book an ambulance according to his/her co
 - The user can select a hospital from the list or he/she can also search for his/her preferred hospital.
 - On confirming the booking , the user is directed to a confirmation page **displaying the traveler and driver details** along with **the user and hospital location**.
 
+## It's Live :
+https://main--splendorous-douhua-fa3db1.netlify.app/
+
 ## Challenges we ran into
 - Connecting our front-end components to the map and list components as we needed to build a API to generate the python module as a function.
 
