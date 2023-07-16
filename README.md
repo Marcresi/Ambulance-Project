@@ -1,7 +1,7 @@
 # FASTLANCE-Ambulance Project
 <img width="520px" height="340px" src="https://github.com/Marcresi/Ambulance-Project/assets/101006060/ac7ceb32-068b-421b-bf5f-70e2edf787b0"/>
 
-<img width="520px" height="340px" src="https://github.com/Marcresi/Ambulance-Project/assets/101006060/ac7ceb32-068b-421b-bf5f-70e2edf787b0"/>
+<img width="520px" height="340px" src="https://github.com/Marcresi/Ambulance-Project/assets/101006060/df1d4f4e-ffda-4e4f-8f4b-1980cd14aeac"/>
 
 
 ### How to Run the Web Application on your **PC**
