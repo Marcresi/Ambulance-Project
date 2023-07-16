@@ -1,4 +1,8 @@
 # FASTLANCE-Ambulance Project
+<img width="520px" height="340px" src="https://github.com/Marcresi/Ambulance-Project/assets/101006060/ac7ceb32-068b-421b-bf5f-70e2edf787b0"/>
+
+<img width="520px" height="340px" src="https://github.com/Marcresi/Ambulance-Project/assets/101006060/ac7ceb32-068b-421b-bf5f-70e2edf787b0"/>
+
 
 ### How to Run the Web Application on your **PC**
 - Step 1: Make sure you have the development environment setuped. 
